@@ -1,0 +1,63 @@
+var app = getApp();
+var tools = require('/utils/tools')
+var baseImgUrl = require('/utils/constant').baseImgUrl
+Page({
+  data: {
+    lineH: baseImgUrl + '/order/lineH.png',
+    orderNo: '',
+    phone: '',
+    userName: '',
+    address: {
+      area: '',
+      addressDetail: '',
+    },
+    orderState: '',//1:支付成功 2:退款中
+    cardOrderId: '',
+    query:{},
+  },
+
+  copyToClipboard() {
+    my.setClipboard({
+      text: this.data.orderNo,
+    });
+    app.showToast('订单号已复制到剪切板');
+  },
+  cancelOrder() {
+    app.showToast('取消成功');
+    this.setData({ orderState: 2 })
+
+  },
+  callOrderDetail() {
+   
+    var params = {
+      cardOrderId: this.data.query.cardOrderId,
+      phone: this.data.query.phone
+    };
+    app.post('getCardOrderWithoutLogin', params, res => {
+      this.setData({ cardOrder: res.resultData.cardOrder })
+      const resData = res.resultData.cardOrder;
+      this.setData({
+          userName: resData.consignee,
+          phone: resData.userPhone,
+          'address.area': resData.area,
+          'address.addressDetail': resData.address,
+          postage: resData.orderType,
+          orderState: resData.orderState,
+          orderNo: resData.orderNo
+      })
+      var userInfo = {
+        userId: resData.userId,
+        phone: resData.phone,
+        userName: resData.consignee,
+      };
+    })
+  },
+  onLoad(query) {
+    this.setData({
+      cardOrderId: query.cardOrderId,
+      phone: query.phone,
+      query:query
+    })
+    this.callOrderDetail();
+  },
+});

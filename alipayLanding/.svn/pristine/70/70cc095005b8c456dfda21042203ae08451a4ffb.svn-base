@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+     "text-cell": "/components/custom/text-cell/text-cell",
+     "van-dialog": "/components/vant-app/dist/dialog/index",
+      "van-button": "/components/vant-app/dist/button/index",
+      "contact-dialog": "/components/contact/contact-dialog/contact-dialog"
+  }
+}

@@ -1,0 +1,61 @@
+page {
+  background: #f7f7f7;
+}
+
+.page {
+  color: white;
+}
+
+.color-white {
+  color: white;
+}
+
+.dp-b {
+  display: block;
+}
+
+.ta-c {
+  text-align: center;
+}
+
+.ta-l {
+  text-align: left;
+}
+
+.ta-r {
+  text-align: right;
+}
+
+.clearfloat{clear:both;}
+
+
+.mt-2 {
+  margin-top: 2vw;
+}
+
+.fy-btn-primary  {
+    background:linear-gradient(90deg,rgba(236,201,125,1),rgba(253,231,183,1))!important;
+    border-radius:23px!important;
+    font-weight:400!important;
+    color:rgba(117,70,10,1)!important;
+    border: none!important;
+}
+
+.fy-btn-default  {
+  background:rgba(255,255,255,1)!important;
+  border:1px solid rgba(117,70,10,1)!important;
+  border-radius:40px!important;
+  color:rgba(117,70,10,1)!important;
+}
+
+/* vant 对话框样式重置 */
+.dialog-index .van-dialog{
+    width:60%;
+}
+
+.dialog-index .van-dialog .van-button--large{
+   font-size: 4vw;
+   height:40px;
+   line-height:40px;  
+}
+

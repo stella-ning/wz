@@ -1,0 +1,8 @@
+{
+  "pullRefresh": true,
+  "usingComponents": {
+     "text-cell": "/components/custom/text-cell/text-cell" ,
+      "van-button": "/components/vant-app/dist/button/index",
+       "van-cell": "/components/vant-app/dist/cell/index"
+  }
+}

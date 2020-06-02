@@ -1,0 +1,10 @@
+/* vant-toast 样式重置 */
+.van-toast {
+    background-color: rgba(50,50,51,.70);
+}
+.van-cell__value{
+    color:#1A1A1A !important;
+}
+.van-field__control:disabled{
+    color:#1A1A1A !important;
+}

@@ -1,0 +1,4 @@
+<view >
+  test1
+  <button size="default" type="primary" onTap="jumpTo">跳转到test2</button>
+</view>

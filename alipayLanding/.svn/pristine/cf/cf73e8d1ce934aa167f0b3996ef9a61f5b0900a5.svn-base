@@ -1,0 +1,21 @@
+.vipAgreement {
+    font-size: 3.5vw;
+    line-height: 5.5vw;
+    padding:4vw;
+    color: black;
+    max-height:85vw;
+    overflow-y:auto
+}
+
+.textBox {
+    height: 80%;
+    overflow-y: scroll;
+}
+
+
+.title {
+    text-align: center;
+    font-weight: 600;
+    padding-top: 2vw;
+    font-size: 4vw;
+}

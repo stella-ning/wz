@@ -1,0 +1,36 @@
+<view class="orderState">
+  <view class="orderStateBox">
+     <view class="header">
+        <van-cell title="订单号:"  border="{{false}}" label="{{orderNo}}">
+            <van-button class="fy-btn-primary" size="small" type="primary" onTap="copyToClipboard" >复制</van-button>
+        </van-cell>
+         <van-cell a:if="{{orderState == 3}}" title="物流单号:"  border="{{false}}" label="{{deliverNo}}">
+            <van-button class="fy-btn-primary" size="small" type="primary" onTap="copyShipmentToClipboard" >复制</van-button>
+        </van-cell>
+        <van-cell title="物流进度" border="{{false}}" title-width="20vw">
+             <text a:if="{{orderState == 2}}" class="text">待发货（24小时内发货）</text>
+             <text a:if="{{orderState == 3}}" class="text">已发货</text>
+             <text a:if="{{orderState == 5}}" class="text">退款中（需1-2个工作日处理）</text>
+             <text a:if="{{orderState == 6}}" class="text">已退款</text>
+             <text a:if="{{orderState == 7}}" class="text">退款失败（请联系客服）</text>
+        </van-cell>
+     </view>
+     <image class="lineH " mode="widthFix" src="{{lineH}}" />  
+     <view class="body">
+        <text class="shipmentTitle">收货人信息</text>
+        <van-cell title="姓名" border="{{false}}">
+            <text class="text">{{userName}}</text>
+        </van-cell>
+         <van-cell title="手机号码" border="{{false}}">
+            <text class="text">{{phone}}</text>
+        </van-cell>
+         <van-cell title="收货地址" border="{{false}}">
+            <text class="text">{{address.area}}{{address.addressDetail}}</text>
+        </van-cell>
+     </view>
+     <view class="footer {{orderState == 2 ?'btnShow':'btnHide'}}" >
+          <van-button class="footerBtn fy-btn-primary" size="normal" type="primary" onTap="cancelOrder" >取消订单</van-button>
+          <text class="dp-b footerText">发货后不可取消订单</text>
+     </view>
+  </view>
+</view>

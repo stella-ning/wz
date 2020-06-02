@@ -1,0 +1,26 @@
+.dialogContent {
+    padding: 3vw;
+    text-align: center;
+}
+
+.dialogContent .title {
+    color: #75460A;
+    font-size: 4vw;
+}
+
+.dialogContent text {
+    font-size: 3vw;
+    color: #84796B;
+    margin-top: 3vw;
+    text-align: center;
+}
+
+.dialogContent .btn{
+    margin:0px auto;
+    width: 60vw;
+    margin-top: 5vw;
+    border-radius: 10vw;
+    font-size: 4vw;
+
+}
+

@@ -1,0 +1,81 @@
+<view class="buyCard">
+  <view class="vipBox">
+   
+    <view class="vipBanner" style="{{`background-image: url(${topBgNew})`}}">
+      <image class="iconBox" mode="scaleToFill" src="{{successIcon}}"></image>
+      <view class="vipInfo">
+        <text class="fontSmall dp-b">会员  {{userName}}（{{phone}}）</text>
+        <text class="fontBig dp-b">恭喜您！成功锁定尊享名额！</text>
+        <view class="timeBox">
+          <text class="gray ">请在</text>
+          <!-- <van-count-down :time="leftTime" format="mm 分 ss 秒"/> -->
+          <label class="counter" >{{countdownLabel}}</label>
+          <text class="gray">内完成支付</text>
+        </view>
+      </view>
+    </view>
+    <!-- main -->
+    <view class="main mt-2">
+      <view class="addressBox">
+        <view class="address">
+          <view class="iconBox">
+            <image class="locationIcon" mode="widthFix" src="{{addressIcon}}"></image>
+          </view>
+          <view class="textBox">
+            <text class="name dp-b">{{userName}}（{{phone}}）</text>
+            <text class="area">{{address.area}}{{address.addressDetail}}</text>
+          </view>
+          <view class="operate">请确保收货地址正确</view>
+        </view>
+      </view>
+      <view class="vipCardBox">
+        <view class="vipCard flex align-center justify-between">
+          <view class="cardName">麒麟卡</view>
+          <view class="cardPrice">
+            <text class="newPrice">￥0</text>
+            <text class="oldPrice">
+              （原价:
+              <text>￥{{cardOriginalPrice/100}}</text>
+              ）
+            </text>
+          </view>
+        </view>
+        <view class="bannerBox">
+          <image class="imgBox" mode="widthFix" src="{{limitActive}}"></image>
+        </view>
+        <!-- postageBox -->
+        <view class="postageBox">
+          <text style="font-weight:300">邮费：</text>
+          <text>￥{{generalPostagePrice /100}}（普通快递，24小时内发货）</text>
+          <label class="postageRadio">
+            <radio checked="{{postageRadio}}"></radio>
+          </label>
+        </view>
+        <icon-item iconUrl="{{alipay}}" title="支付宝支付">
+          <label class="postageRadio" slot="rightBox">
+            <radio checked="{{postageRadio}}"></radio>
+          </label>
+        </icon-item>
+      </view>
+    </view>
+  </view>
+  <!-- footer -->
+  <view class="footerBox">
+    <view class="footer">
+      <view class="left">
+        <view class="leftTop">
+          <text class="vipCardPrice">会员卡价格:￥0</text>
+          <text class="postagePrice">邮费:￥ {{postage == 1? (generalPostagePrice/100) : (urgentPostagePrice/100)}}</text>
+        </view>
+        <view class="totalPrice">
+          ￥
+          <text>{{postage == 1? (generalPostagePrice/100) : (urgentPostagePrice/100)}}</text>
+        </view>
+      </view>
+      <view class="right">
+        <button class="submitBtn" size="default" type="primary" onTap="toPay" style="{{`  background-image: url(${buyBtnBg})`}}">立即领卡</button>
+      </view>
+    </view>
+    <view class="label" >{{deadLine}}后，价格恢复￥{{cardOriginalPrice/100}}</view>
+  </view>
+</view>

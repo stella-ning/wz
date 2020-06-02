@@ -1,0 +1,222 @@
+<view class="cardSimple">
+   
+   <scroll-view scroll-y="{{true}}" style="height: 100vh;" onScrollToUpper="upper" onScrollToLower="lower"  >
+      <image class="topImg" mode="widthFix" src="{{partOneBg}}"/>
+
+       <!-- privilegeBox -->
+       <view class="privilegeBox" >
+          <view class="themeContent"  a:for="{{cardData.privilege8}}" a:for-item="item"  a:for-index="index">
+             <image class="imgBox" mode="widthFix" src="{{item.logo}}"/>
+             <text class="title">{{item.title}}</text>
+             <text class="subTitle">{{item.subTitle}}</text>
+             <text class="subTitle">{{item.outLet}}</text>
+          </view>
+       </view>
+       <view class="themeList">
+            <view class="themeContent"  a:for="{{cardData.discount8}}" a:for-item="item"  a:for-index="index">
+               <image class="imgBox" mode="widthFix" src="{{item.logo}}"/>
+               <text class="title">{{item.title}}</text>
+               <text class="subTitle">{{item.subTitle}}</text>
+               <text a:if="{{item.label}}" class="tipsLabel">{{item.title == '尊享'?'NEW':'HOT'}}</span>
+          </view>
+      </view>
+      <view class="couponBox">
+         <image class="imgBox" mode="widthFix" src="{{coupon}}"/>
+         <image class="priceBtn" mode="widthFix" src="{{gotItBth}}"/>
+      </view>
+      <!-- selectedPrivileges -->
+      <view class="selectedPrivileges">
+          <view class="blockHead">
+            <image class="imgBox" mode="widthFix" src="{{selectedPrivilegesBg}}"/>
+             <text class="blockTitle">会员精选特权</text>
+             <text class="subTitle">吃喝玩乐全覆盖，最高可省50%</text>
+          </view>
+          <view class="selectedPrivilegesBody">
+               <view class="bodyLeft">
+                  <image class="imgBox" mode="widthFix" src="{{selectedPrivileges21}}"/>
+                  <view class="bodyContent">
+                     <text class="title dp-b ta-l">全国280城</text>
+                     <text class="subTitle dp-b ta-l"> 车主福利8折起</text>
+                  </view>
+               </view>
+               <view class="bodyRight">
+                  <image class="imgBox" mode="widthFix" src="{{selectedPrivileges2}}"/>
+                  <view class="bodyContent">
+                     <text class="title dp-b ta-l">肯德基</text>
+                     <text class="subTitle dp-b ta-l"> 会员6折起</text>
+                  </view>
+               </view>
+          </view>
+          <!-- newVipGoods -->
+          <view class="newVipGoods">
+                <view class="blockHead">
+                  <image class="imgBox" mode="widthFix" src="{{newVipGoodsBg}}"/>
+                  <text class="blockTitle">新人专享0元购</text>
+                  <text class="subTitle">每日好货1000+件全额返/0元还包邮</text>
+               </view>
+               <view class="bodyBox goodsBox">
+                 <image class="imgBox" mode="widthFix" src="{{price0}}"/>
+               </view>
+          </view>
+          <!-- membershipPrivileges -->
+         <view class="membershipPrivileges">
+            <view class="blockHead">
+                  <image class="imgBox" mode="widthFix" src="{{membershipPrivilegesBg}}"/>
+                  <text class="blockTitle">会员专享100+特权  </text>
+                  <text class="subTitle">购物优惠+返现，全年预计可省6800元</text>
+            </view>
+            <view class="bodyBox membershipPrivilegesBody">
+                <view class="hiddenBox">
+                   <scroll-view class="globalBrandList" scroll-x="{{true}}" >
+                      <image class="imgBox" mode="widthFix" src="{{tq1}}"/>
+                      <image class="imgBox" mode="widthFix" src="{{tq2}}"/>
+                      <image class="imgBox" mode="widthFix" src="{{tq3}}"/>
+                      <image class="imgBox" mode="widthFix" src="{{tq4}}"/>
+                   </scroll-view>
+                </view>
+                <view class="membershipPrivilegeTab">
+                  <view class="tabItem {{currentPrivilege == index?'active':''}}" a:for="{{membershipPrivilegeTab}}"   a:for-item="item"  a:for-index="index" onTap="selectPrivilege" data-type="{{item.englishName}}" data-index="{{index}}">{{item.name}}</view>
+                </view>
+                <view class="membershipPrivilegeList">
+                     <view class="listItem" a:for="{{membershipPrivilegeList}}" a:for-item="item" a:for-index="index">
+                           <image class="imgBox" mode="widthFix" src="{{item.logo}}"/>                      
+                           <text class="title dp-b">{{item.title}}</text>
+                           <text class="subTitle dp-b">{{item.subTitle}}</text>
+                     </view>
+                </view>
+               <view class="moreBrand" onTap="getCard">
+                  获取全部特权>>
+               </view>
+            </view>
+      </view>
+      <!-- globalBrand -->
+      <view class="globalBrand">
+          <view class="blockHead">
+               <image class="imgBox" mode="widthFix" src="{{globalBrandBg}}"/>
+               <text class="blockTitle">全球大牌优卖 </text>
+               <text class="subTitle">购物优惠+返现，全年预计可省8800元</text>
+          </view>
+          <view class="bodyBox globalBrandBody">
+                <view class="globalTab">
+                  <view class="tabItem {{currentBrand == index?'active':''}}" a:for="{{globalTab}}"   a:for-item="item"  a:for-index="index" onTap="selectBrand" data-type="{{item.englishName}}" data-index="{{index}}">{{item.name}}</view>
+                </view>
+                <image class="imgBox" mode="widthFix" src="{{globalBrandImg}}"/>
+                 <view class="moreBrand" onTap="getCard"> 获取更多大牌>></view>
+          </view>
+      </view>
+      <!-- seckillBox -->
+      <view class="seckillBox ">
+           <view class="blockHead">
+               <image class="imgBox" mode="widthFix" src="{{seckillBoxBg}}"/>
+               <text class="blockTitle">会员1元秒杀专享 </text>
+               <text class="subTitle">每日5常活动，会员超级让利</text>
+          </view>
+          <view class="bodyBox seckillGoods">
+              <view class="goodsBox">
+                  <view class="timeList">
+                      <view class="tabItem {{currentSeckillIndex == index?'active':''}}" a:for="{{seckillTimeTabList}}"   a:for-item="item"  a:for-index="index" onTap="selectSeckillTab" data-time="{{item.time}}" data-index="{{index}}">
+                          <text class="title dp-b">{{item.time}}</text>
+                          <text class="subTitle dp-b">{{item.label}}</text>
+                      </view>
+                  </view>
+                  <image class="imgBox" mode="widthFix" src="{{seckillImg}}"/>
+              </view>
+          </view>
+      </view>
+      <!-- morePrivileges -->
+      <view class="morePrivileges">
+          <image class="imgBox" mode="widthFix" src="{{morePrivileges}}"/>
+      </view>
+      <!-- partFour -->
+      <view class="partFour">
+         <view class="persion">
+             <view class="header">
+                   <text class="dp-b">“当前，已有<text style="color:#fff">2700735</text>位购物达人 </text>
+					    <text class="dp-b">正在使用<text style="color:#fff">麒麟卡</text>享受特权”</text>
+             </view>
+              <view class="tx">
+                <image class="imgBox" mode="widthFix" src="{{tx}}"/>
+              </view>
+         </view>
+      </view>
+      <!-- cooperation -->
+      <view class="cooperation">
+          <view class="cooperationHeader">
+              <image class="imgHeader" mode="widthFix" src="{{cooperationImg}}"/>
+          </view>
+          <view class="cooperationBody">
+               <view class="cooperate">
+                  <view class="headTitle">
+                     <image class="cooperateIconImg" mode="widthFix" src="{{cooperateIcon}}"/>
+                     <text>商务合作</text>   
+                  </view>
+                  <text class="dp-b">如您有合作意向 </text>
+                  <text class="dp-b">可联系此邮箱jingguitar520@163.com</text>
+				</view>
+            <view class="contact">
+					<view class="headTitle">
+                   <image class="contactIcon" mode="widthFix" src="{{contactIcon}}"/>
+						在线客服
+					</view>
+					<text>如您遇到任何疑问，欢迎联系咨询</text>
+					<view class="contactBody">
+						<text class="flex dp-b">
+							<text>
+								电话：
+							</text>
+							<text>
+								{{servicePhone}}
+							</text>
+						</text>
+						<text class="flex dp-b">
+							<text>
+								服务时间：
+							</text>
+							<text>
+								9:00 - 18:00
+							</text>
+						</text>
+					</view>
+
+					<view class="agreementBox" onTap="onDialogShow">
+						了解会员章程 
+                   <image class="rightIcon" mode="widthFix" src="{{rightIcon}}"/>
+					</view>
+					<view class="toOrderSeek"  onTap="toSeek">
+						已领卡，查看物流情况 >
+					</view>
+               <view class="toOrderSeek" >
+                     <text class="dp-b">免费领取，邮费需自理</text>
+                     <text class="dp-b">本活动由商家全权负责，</text>
+                     <text class="dp-b">与中国移动通信集团广东有限公司无关</text>
+					</view>
+				</view>
+          </view>
+      </view>
+      <!-- agreement -->
+      <view class="agreement">
+			<view class="company">
+				<text class="dp-b">广州飞宇互联网科技有限公司</text>
+				<text class="dp-b">粤ICP备19140246号-1</text>
+			</view>
+		</view>
+    </scroll-view> 
+    <!-- footerBox -->
+    <view class="footerBox">
+          <view class="line"></view>
+			<view class="footerTop" onTap="getCard">
+				<text><label>立即领卡</label>（{{deadLine}}截止）</text>
+			</view>
+         <image class="label" onTap="getCard" mode="widthFix" src="{{redPackage}}"/>
+   
+    </view>
+    <view class="contactBox" onTap="showContactDialog" style="{{`background-image: url(${serveBtn})`}}"></view>
+    <contact-dialog show="{{show}}" onClose="onContactDialog"></contact-dialog>
+    <van-dialog
+      use-slot
+      onClose="onDialogClose"
+      show="{{ dialogShow }}"
+    >
+      <vip-agreement></vip-agreement>
+  </van-dialog>
+</view>

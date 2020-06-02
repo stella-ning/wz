@@ -1,0 +1,45 @@
+.orderState {
+    padding: 3vw;
+    color: #1A1A1A;
+}
+
+.orderStateBox {
+    background: white;
+    border-radius: 4vw;
+}
+
+.lineH {
+    width: 100%;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 8vw;
+    display: none;
+}
+
+.footer .footerBtn{
+  width: 70vw;
+}
+
+.footer .footerText{
+  padding: 3vw;
+  font-size:3vw;
+ 
+}
+
+.orderStateBox .shipmentTitle {
+    font-size: 4vw;
+    text-align: left;
+    color: #1A1A1A;
+    padding: 10px 15px;
+    display: block;
+}
+
+.btnHide{
+    display: none;
+}
+
+.btnShow {
+    display: block;
+}

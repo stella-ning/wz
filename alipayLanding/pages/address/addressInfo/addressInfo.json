@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "icon-input": "/components/custom/icon-input/icon-input",
+    "icon-item": "/components/custom/icon-item/icon-item",
+    "van-area": "/components/vant-app/dist/area/index",
+     "van-popup": "/components/vant-app/dist/popup/index"
+  }
+}

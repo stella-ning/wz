@@ -1,0 +1,8 @@
+{
+    "usingComponents": {
+         "van-popup": "/components/vant-app/dist/popup/index",
+         "vip-agreement": "/components/vipCard/vipAgreement/vipAgreement",
+          "van-dialog": "/components/vant-app/dist/dialog/index",
+          "contact-dialog": "/components/contact/contact-dialog/contact-dialog"
+    }
+}

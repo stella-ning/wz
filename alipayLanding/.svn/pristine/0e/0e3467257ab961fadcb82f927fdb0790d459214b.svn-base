@@ -1,0 +1,10 @@
+<view class="IconBox">
+  <image class="leftIcon" mode="aspectFit" src="{{iconUrl}}"/>
+  <label class="title">{{title}}</label>
+  <view class="rightBox">
+    <input class="rightInput" type="{{inputType}}" onInput="onInput" placeholder="{{placeholder}}" value="{{inputValue}}" />
+  </view>
+  <slot name="rightBox">
+     
+  </slot>
+</view>

@@ -1,0 +1,15 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/address/addressInfo/addressInfo",
+    "pages/card/buyCard/buyCard",
+    "pages/order/orderDetail/orderDetail",
+    "pages/order/orderSeek/orderSeek",
+    "pages/order/orderState/orderState",
+    "pages/test1/test1",
+    "pages/test2/test2"
+  ],
+  "window": {
+    "defaultTitle": "麒麟卡"
+  }
+}

@@ -1,0 +1,567 @@
+
+.cardSimple {
+    background: rgb(25, 25, 24);
+    box-sizing: border-box;
+    margin-bottom: 15vw;
+}
+.topBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 12vw;
+    background: rgb(17, 15, 12);
+    font-size: 3.73333vw;
+    color: rgb(225, 191, 108);
+    padding-left: 4vw;
+    z-index: 9999;
+    padding-top: 2vw;
+}
+.topBarLogo {
+    width: 4vw;
+    height: 4vw;
+    vertical-align: middle;
+}
+.topBarText {
+    vertical-align: middle;
+    margin-left: 1vw;
+}
+ .tips {
+    font-size: 2.66667vw;
+    color: rgb(226, 191, 108);
+    font-weight: 400;
+    padding-left: 5.33333vw;
+}
+
+.topImg {
+    width: 100%;
+    
+}
+
+.privilegeBox {
+  display: flex;
+  flex-flow: row wrap;
+}
+.themeList {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 0 2.66667vw;
+  
+}
+.privilegeBox .themeContent {
+    flex: 1;
+    width: 33%;
+    text-align: center;
+}
+.themeList .themeContent {
+    width: 25%;
+    text-align: center;
+    margin-top: 5vw;
+    position: relative;
+}
+/*  */
+.themeContent .imgBox{
+    width: 12vw;
+    height: 12vw;
+    margin: 0 auto 2.66667vw;
+}
+.themeContent .title{
+    color: rgb(250, 221, 181);
+    font-size: 3.73333vw;
+    line-height: 3.46667vw;
+    margin-bottom: 1.33333vw;
+    display: block;  
+}
+.themeContent .subTitle{
+    color: rgb(209, 200, 168);
+    font-size: 2.93333vw;
+    font-weight: 400;
+    padding: 0 2.13333vw;
+    line-height: 4vw;
+    display: block;
+}
+
+.themeContent 	.tipsLabel{
+   	width: 9.33333vw;
+    height: 3.73333vw;
+    background: -webkit-gradient(linear,left bottom,left top,from(rgb(226, 88, 19)),to(rgb(243, 103, 33)));
+    background: linear-gradient(0deg,rgb(226, 88, 19),rgb(243, 103, 33));
+    border-radius: 3.73333vw 3.73333vw 3.73333vw 0;
+    font-size: 2.66667vw;
+    font-weight: 300;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    top: -1vw;
+    right: .53333vw;
+}
+
+.couponBox {
+    text-align: center;
+    position: relative;
+    height: 39vw;
+}
+.couponBox .imgBox{
+    width: 85vw;
+    margin: 0 auto;
+    position:absolute;
+    left:8vw;
+    top: 4vw;
+}   
+.couponBox .priceBtn{
+    width: 30vw;
+    position:absolute;
+    right:15vw;
+    bottom:9vw;
+} 
+
+.selectedPrivileges {
+    margin: 0;
+    border-radius: 2.66667vw;
+    font-weight: 400;
+    padding: 3vw;
+}
+.blockHead {
+    /* padding: 4vw 4vw 6.66667vw; */
+    position: relative;
+    /* height: 22vw; */
+}
+
+.blockHead .blockTitle{
+    font-size: 6.13333vw;
+    line-height: 1.875rem;
+    font-weight: 600; 
+    text-shadow: 0 1px 10px rgba(255,173,73,.5);
+    left:5vw;
+    top:-4vw;
+    position:absolute;
+    user-select:none;
+    color: white;
+}
+
+.blockHead .imgBox {
+    /* position:absolute;
+    left:2.5vw; */
+    width:94vw;
+}
+
+.blockHead .subTitle {
+    font-size: 3.2vw;
+    font-weight: 400;
+    left:5vw;
+    top:13vw;
+    position:absolute;
+}
+
+.selectedPrivileges .selectedPrivilegesBody {
+    background: rgb(255, 255, 255);
+    border-radius: 2.66667vw;
+    padding: 2.66667vw;
+    display: -webkit-box;
+    display: flex;
+    height: 22.33333vw;
+    margin-top: -3vw;
+}
+.selectedPrivileges .bodyLeft, .selectedPrivileges .bodyRight{
+    border-radius: 2.66667vw;
+    position: relative;
+    margin-top:3vw;
+    flex: 1;
+}
+.selectedPrivileges .bodyLeft {
+      margin-right: 2.13333vw;
+}
+
+.selectedPrivilegesBody .imgBox {
+    width: 100%;
+}
+
+.selectedPrivileges .bodyContent {
+    position: absolute;
+    top: 0;
+    left: 5vw;
+    background: rgba(0, 0, 0, 0);
+    text-align: center;
+    padding-top: 5.33333vw;
+    padding-left: 10.66667vw;
+    line-height: 5vw;
+}
+
+.selectedPrivileges .bodyContent .title{
+    font-size: 3.5vw;
+    color: rgb(255, 255, 255);
+    font-weight: 400;
+}
+.selectedPrivileges .bodyContent .subTitle{
+    font-size: 3vw;
+    color: rgb(255, 231, 197);
+    font-weight: 400;
+} 
+
+
+.newVipGoods {
+    margin-top: 3vw;
+}
+
+.newVipGoods .goodsBox {
+    background: rgb(247, 247, 247);
+    padding: 2.66667vw;
+    border-radius: 2.66667vw;
+}
+
+.newVipGoods .goodsBox .imgBox{
+   width: 100%;
+}
+
+.bodyBox {
+    position: relative;
+    top: -2.66667vw;
+}
+
+.membershipPrivileges .membershipPrivilegesBody {
+    background: linear-gradient(-180deg,rgb(255, 255, 255),rgb(240, 240, 240));
+    border-radius: 2.66667vw;
+    padding: 2.66667vw;
+}
+.globalBrandList {
+    white-space: nowrap;
+    display:flex;
+}
+.globalBrandList .imgBox {
+    width: 25.33333vw;
+    border-radius: .3125rem;
+    margin-right: 3vw;
+    flex-shrink:0;
+    flex-grow:0;
+}
+
+.membershipPrivileges .membershipPrivilegesBody .membershipPrivilegeTab {
+    text-align: center;
+    padding-right: 2.66667vw;
+    display: flex;
+    margin-top: 5.33333vw;
+}
+
+.membershipPrivileges .membershipPrivilegesBody .membershipPrivilegeTab .tabItem{
+    display: inline-block;
+    width: 16vw;
+    height: 8vw;
+    text-align: center;
+    line-height: 8vw;
+    border-radius: 8vw;
+    background: rgb(235, 252, 243);
+    color: rgb(34, 175, 171);
+    font-size: 2.66667vw;
+    margin-right: 1.33333vw;
+    font-weight: 300;
+}
+
+.membershipPrivileges .membershipPrivilegesBody .membershipPrivilegeTab .active{
+    background: linear-gradient(-90deg,rgb(66, 225, 201),rgb(67, 209, 206));
+    color: rgb(255, 255, 255);
+}
+
+.membershipPrivilegeList {
+    display: flex;
+    width: 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-flow: row wrap;
+    padding-right: 2.66667vw;
+    margin-top: 2.66667vw;
+}
+
+.membershipPrivilegeList .listItem {
+    width: 28vw;
+    background: rgb(255, 255, 255);
+    border-radius: 2.66667vw;
+    margin-bottom: 1.33333vw;
+    margin-right: 1.33333vw;
+    padding-bottom: 4vw;
+    text-align: center;
+}
+
+.membershipPrivilegeList .listItem .imgBox {
+    width: 40%;
+    margin: 2vw 0 ;
+}
+
+.membershipPrivilegeList .listItem .title {
+    font-size: 3.73333vw;
+    color: rgb(26, 26, 26);
+}
+.membershipPrivilegeList .listItem .subTitle {
+    font-size: 3.2vw;
+    color: rgb(212, 178, 131);
+    margin-top: 1vw;
+}
+
+.moreBrand {
+    margin-right: 2.66667vw;
+    height: 12vw;
+    line-height: 12vw;
+    background: rgb(255, 255, 255);
+    border-radius: 2.66667vw;
+    text-align: center;
+    font-size: 3.73333vw;
+    color: rgb(144, 95, 33);
+    margin-top: 1vw;
+}
+
+.globalBrandBody {
+    background: linear-gradient(-180deg,rgb(255, 255, 255),rgb(240, 240, 240));
+    border-radius: 2.13333vw;
+    padding: 4vw 0 4vw 2.66667vw;
+}
+
+.globalBrandBody .globalTab {
+    margin-bottom: 2.66667vw;
+}
+
+.globalBrandBody .globalTab .tabItem {
+    width: 17.33333vw;
+    height: 8vw;
+    background: rgb(204, 204, 204);
+    display: inline-block;
+    margin-right: 2.66667vw;
+    font-size: 3.2vw;
+    font-weight: 400;
+    background: rgb(226, 241, 255);
+    color: rgb(96, 156, 239);
+    text-align: center;
+    line-height: 8vw;
+    border-radius: 8vw;
+}
+
+.globalBrandBody .globalTab .active {
+    background: linear-gradient(0deg,rgb(128, 193, 253),rgb(127, 191, 253),rgb(95, 155, 239));
+    color: rgb(255, 255, 255);
+}
+
+.globalBrandBody .imgBox {
+    width:96%;
+}
+
+
+.seckillGoods .timeList {
+    padding-top: 1.33333vw;
+    text-align: center;
+    margin-bottom: 3.46667vw;
+    display:flex;
+}
+.seckillGoods .goodsBox {
+    position: relative;
+    background: rgb(247, 247, 247);
+    padding: 2.66667vw;
+    border-radius: 2.66667vw;
+}
+
+.seckillGoods .timeList .tabItem {
+    background: rgb(247, 234, 252);
+    border-radius: 4.8vw;
+    width: 16.53333vw;
+    color: rgb(195, 94, 241);
+    font-weight: 400;
+    margin: 0 1vw;
+    flex:1 ;
+}
+
+.seckillGoods .timeList .tabItem .title{
+   font-size: 4.26667vw;
+    line-height: 4.8vw;
+}
+
+.seckillGoods .timeList .tabItem .subTitle{
+    font-size: 10px;
+    font-weight: 300;
+    line-height: 4vw; 
+}
+
+.seckillGoods .timeList .active {
+    background: linear-gradient(-90deg,rgb(192, 120, 251),rgb(195, 93, 240));
+    color: rgb(255, 255, 255);
+}
+
+.seckillGoods .imgBox {
+    width:100%;
+}
+
+
+.morePrivileges {
+
+}
+
+.morePrivileges .imgBox {
+   width: 100%; 
+}
+
+.partFour {
+    background: rgb(58, 54, 45);
+    border-radius: 2.66667vw;
+    font-weight: 400;
+    margin-top: 3vw;
+}
+
+.partFour .persion {
+    border-radius: 2.66667vw;
+    text-align: center;
+}
+
+.partFour .persion .header {
+    padding-top: 4.26667vw;
+    padding-bottom: 2.66667vw;
+    color: rgb(240, 217, 164);
+    font-size: 4.8vw;
+    font-weight: 400;
+    line-height:7vw;
+}
+.partFour .persion .tx {
+    background: rgb(44, 43, 41);
+    padding: 8vw 10vw;
+}
+
+.partFour .imgBox {
+    width: 100%;
+}
+
+.cooperation {
+    margin-top: 3vw ;
+    border-radius: 2.66667vw;
+    font-weight: 400;
+    background: rgb(58, 54, 45);
+}
+
+.cooperation .cooperationHeader{
+    width: 49.33333vw;
+    margin: 0 auto;
+    padding: 4vw 0 6.66667vw;
+}
+
+.cooperation  .cooperationHeader .imgHeader {
+    width: 100%;
+}
+
+.cooperationBody {
+    background: rgb(44, 43, 41);
+    border-radius: 2.66667vw;
+    color: rgb(223, 196, 121);
+    text-align: center;
+    font-size: 3.73333vw;
+    font-weight: 300;
+    padding-bottom: 8vw;
+}
+.cooperationBody .cooperate {
+    margin: 0 2.13333vw;
+    padding-bottom: 9.33333vw;
+    border-bottom: 1px solid rgb(76, 76, 76)
+}
+
+.cooperationBody .cooperate .cooperateIconImg{
+   width: 5vw;
+   margin-right: 2vw;
+   vertical-align:middle;
+}
+
+.cooperation .cooperationBody .headTitle {
+    height: 16.93333vw;
+    line-height: 16.93333vw;
+    color: rgb(240, 217, 164);
+}
+
+.cooperationBody .contactIcon {
+   width:4vw;
+   vertical-align:middle;
+   margin-right:2vw;
+   
+}
+
+.cooperationBody .rightIcon {
+   width: 4vw;
+   margin-left:2vw;
+   vertical-align:middle;
+}
+
+.cooperation .cooperationBody .contact .contactBody {
+    margin-top: 8vw;
+    margin-bottom: 5.33333vw;
+}
+.cooperation .cooperationBody .contact .agreementBox {
+    width: 48vw;
+    height: 9.33333vw;
+    border-radius: 9.33333vw;
+    border: 1px solid rgb(240, 217, 164);
+    margin: 0 auto;
+    text-align: center;
+    line-height: 8.8vw;
+    font-size: 3.73333vw;
+    color: rgb(240, 217, 164);
+    font-weight: 400;
+}
+
+.cooperation .cooperationBody .contact .toOrderSeek{
+    margin-top: 6.66667vw;
+    font-size: 3.73333vw;
+    font-weight: 400;
+    color: rgb(240, 217, 164);
+}
+
+.agreement {
+    margin-top: 5vw;
+}
+
+.agreement .company{
+    color: rgb(240, 217, 164);
+    text-align: center;
+    font-weight: 400;
+}
+
+.footerBox{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    box-sizing: border-box;
+    text-align: center;
+    background: rgb(14, 10, 9);
+    transition: all .5s ease;
+}
+
+.footerBox .line{
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg,rgb(53, 49, 45),rgb(241, 211, 174),rgb(53, 49, 45));
+}
+.footerBox .label{
+    width: 44.8vw;
+    height: 8.8vw;
+    position: absolute;
+    right: 5.33333vw;
+    top: -7.46667vw;
+    animation: bounce-down 1.5s linear infinite;
+}
+
+.footerBox .footerTop {
+    width: 94.66667vw;
+    height: 13.33333vw;
+    margin: 2.13333vw auto 2.13333vw;
+    background: linear-gradient(-180deg,rgb(237, 202, 126),rgb(216, 168, 91));
+    border-radius: 13.33333vw;
+    line-height: 13.33333vw;
+    color: rgb(117, 70, 10);
+    font-size: 4.26667vw;
+}
+
+@keyframes bounce-down {
+    25% {-webkit-transform: translateY(-5px);}
+    50%, 100% {-webkit-transform: translateY(0);}
+    75% {-webkit-transform: translateY(5px);}
+}
+
+.contactBox {
+    height: 15vw;
+    width: 6vw;
+    position: fixed;
+    right: 0;
+    top: 40vw;
+    background-size:100% 100%;
+  
+}

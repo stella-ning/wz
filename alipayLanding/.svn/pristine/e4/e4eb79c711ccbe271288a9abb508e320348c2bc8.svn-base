@@ -1,0 +1,66 @@
+<view class="addressInfo">
+  <view class="addressForm">
+    <view class="topBanner">
+      <image class="imgBox" mode="widthFix" src="{{addressBg}}"/>
+    </view>
+    <!-- templateBox -->
+    <view class="templateBox">
+      <view class="con">
+        <view class="title">
+                    尊享名额仅剩
+          <text style="color: rgb(239, 34, 5);margin-left:1vw;">4%</text>
+        </view>
+        <view class="processe">
+          <view class="progress-bar active" style="width: 96%;">
+            <label class="progress-value">96%</label>
+          </view>
+        </view>
+        <image class="imgBox" mode="widthFix" src="{{limitActive}}"/>
+        <text class="subTitle dp-b">填写收货信息，领取卡片</text>
+        <form class="infoInput">
+        
+              <icon-input
+                 iconUrl="{{userIcon}}"
+                 title="持卡人姓名",
+                 placeholder="请输入持卡人姓名" onInput="onInputUserName" value="{{userName}}"> </icon-input>
+             <icon-input
+                 iconUrl="{{phoneIcon}}"
+                 title="持卡人手机"
+              placeholder="请输入持卡人持卡人手机" onInput="onInputPhone" value="{{phone}}"> </icon-input>
+              <icon-item
+                
+                 iconUrl="{{areaIcon}}"
+                 title="收货地址"
+               > 
+               <text a:if="{{address.area.length > 2}}"  slot="rightBox"   onTap="showAreaDialog" class="areaLabel">{{address.area}}</text>
+              <text  a:else slot="rightBox"   onTap="showAreaDialog" class="areaLabel">请选择收货区域 >></text>
+             </icon-item>
+               <icon-input
+                 iconUrl="{{detailIcon}}"
+                 title="详细地址"
+                 placeholder="请输入详细地址" onInput="onInputAddress" value="{{address.addressDetail}}"> </icon-input>
+        </form>
+      </view>
+    </view>
+    <!-- footer -->
+     <view class="footerBtn footerFixed" >
+            <view class="left van-hairline--top">
+                <text class="amount">
+                    总金额：
+                    <text class="nowPrice">￥<text>0</text></text>
+                    <text class="oldPrice">￥299</text>
+                </text>
+                <view class="tips">尊享名额仅剩：4% </view>
+            </view>
+            <view class="right">
+                <!-- <van-button class="submitBtn"  @click="onSubmit"  :loading='btnLoading'>提交申请</van-button> -->
+                <button class="submitBtn" size="default" type="primary" onTap="toApply" style="{{`background-image: url(${buyBtnBg})`}}">提交申请</button>
+            </view>
+            
+        </view>
+</view>
+    
+    <van-popup position="bottom" show="{{ showAreaList }}" onClose="onClose">
+       <van-area v-if="showAreaList " area-list="{{ areaList }}" onConfirm="onConfirm" onCancel="onCancel"/>
+    </van-popup>
+</view>

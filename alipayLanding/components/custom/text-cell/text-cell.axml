@@ -1,0 +1,6 @@
+<view class="text-cell">
+  <text class="label">{{label}}</text>
+  <text class="text">
+     <slot></slot>
+  </text>
+</view>

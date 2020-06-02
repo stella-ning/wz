@@ -1,0 +1,142 @@
+.addressForm .topBanner{
+    width: 100%;
+    height: 49.33333vw;
+}
+
+.addressForm .topBanner .imgBox,.templateBox .imgBox{
+    width: 100%;
+}
+
+.addressForm .templateBox {
+    background: rgb(247, 247, 247);
+    border-radius: 3.2vw 3.2vw 0 0;
+    position: relative;
+    top: -4vw;
+}
+
+.addressForm .con {
+    padding: 0 5vw 15vw 5vw;
+}
+.addressForm .subTitle, .addressForm .title {
+    height: 12vw;
+    line-height:12vw;
+    color: #333;
+    font-size: 3.5vw;
+}
+
+.addressForm .processe{
+    width: 100%;
+    margin-bottom: 4vw;
+    background: #e6e6e6;
+    height: 2vw;
+    border-radius: .625rem;
+}
+
+.addressForm .progress-bar.active{
+    height: 2vw;
+    border-radius: .625rem;
+    animation: reverse progress-bar-stripes 0.40s linear infinite, animate-positive 2s;
+    background: linear-gradient(-90deg,rgb(236, 201, 125),rgb(253, 231, 183));
+}
+
+.addressForm .processe .progress-value{
+    display: block;
+    padding: 3px 7px;
+    font-size: 3vw;
+    color: rgb(117, 70, 10);
+    border-radius: 4px; 
+    background: linear-gradient(-90deg,rgb(236, 201, 125),rgb(253, 231, 183));
+    position: absolute;
+    top: 4vw;
+    right: 1vw;
+    animation: progressLabelAni 2.2s forwards ;
+}
+.addressForm .processe .progress-value:after {
+    content: "";
+    border-top: 6px solid rgb(236, 201, 125);
+    border-left: 6px solid rgba(0, 0, 0, 0);
+    border-right: 6px solid rgba(0, 0, 0, 0);
+    position: absolute;
+    bottom: -6px;
+    left: 34%;
+}
+
+ @keyframes animate-positive{
+    0% { width: 0; }
+}
+
+@keyframes progressLabelAni{
+    0% { right: 80vw; }
+    100% { right: 3vw; }
+}
+
+.addressForm .footerBtn.footerFixed{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    display: flex;
+}
+
+.addressForm .footerBtn .left {
+    height: 15vw;
+    padding-left: 4vw;
+    color: rgb(77, 77, 77);
+    width: 40%;
+}
+
+.addressForm .footerBtn .right {
+    flex: 1;
+}
+
+.addressForm .footerBtn .left .amount {
+    display: inline-block;
+    font-size: 4vw;
+    padding: 3vw 0 2.5vw 0;
+}
+
+.addressForm .footerBtn .left .nowPrice {
+    color: rgb(239, 34, 5);
+    font-size: 4vw;
+    padding-right: .3125rem;
+}
+.addressForm .footerBtn .left .oldPrice {
+    text-decoration: line-through;
+}
+
+.addressForm .footerBtn .left .tips{
+    font-size: 3vw;
+    color: rgb(102, 102, 102);
+}
+
+.addressForm .footerBtn{
+    width: 100%;
+    height: 15vw;
+    background: rgb(255, 255, 255);
+}
+
+.addressForm .footerBtn .submitBtn{
+    width: 100%;
+    background: none;
+    /* border: 0; */
+    height: 16vw;
+    line-height: 16vw;
+    font-size: 4.8vw;
+    font-weight: 600;
+    color: rgb(117, 70, 10);
+    text-align: center;
+    padding-left: 8vw;
+    border: none;
+   
+}
+
+/* .area-index {
+    width:100%;
+    left:0px;
+    bottom:0px;
+    position:fixed;
+} */
+.areaLabel {
+    color: #b0b0b0;
+    width: 100%;
+    display: inline-block;
+}

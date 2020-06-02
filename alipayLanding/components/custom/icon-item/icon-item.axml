@@ -1,0 +1,9 @@
+<view class="iconItem">
+  <image class="leftIcon" mode="aspectFit" src="{{iconUrl}}"/>
+  <label class="title">{{title}}</label>
+  <view  class="right">
+      <slot name="rightBox">
+     </slot>
+  </view>
+  
+</view>

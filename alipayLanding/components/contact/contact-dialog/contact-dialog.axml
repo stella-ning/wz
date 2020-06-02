@@ -1,0 +1,23 @@
+<van-dialog
+      use-slot
+      onClose="onDialogClose"
+      show="{{ dialogShow }}"
+      showCancelButton="{{true}}"
+      showConfirmButton="{{false}}"
+    >
+       <view class="dialogContent">
+          <label class="title">客服与售后</label>
+          
+          <view>
+              <!-- <van-button  class="fy-btn-primary  btn" size="normal" type="primary"  >在线客服</van-button> -->
+              <contact-button size="240" class="fy-btn-primary  btn" tnt-inst-id="2088631597871012" scene="聊天窗编码" icon="https://www.fychs.com/wangzhuan/alipayLanding/assets/images/contactBtnBg.png"/>
+          </view>
+          <view>
+               <van-button  class="fy-btn-primary  btn" size="normal" type="default" onTap="cancelOrder" >电话客服</van-button>
+          </view>
+          <text class="mt-2 dp-b text">（电话客服时间：09：00-18：00）</text>
+          <view>
+               <van-button class="fy-btn-default  btn" size="normal" type="default"  onTap="toOrderSeek">查询/取消订单</van-button>
+          </view>
+       </view>
+  </van-dialog>
