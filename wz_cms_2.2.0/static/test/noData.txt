@@ -1,0 +1,12 @@
+POST /fy/membershipCard/activateMembershipCard HTTP/1.1
+Host	192.168.101.31:8081
+Accept	*/*
+Accept-Encoding	gzip, deflate
+Accept-Language	zh-cn
+Content-Type	application/x-www-form-urlencoded
+Origin	http://192.168.101.31:8081
+User-Agent	Mozilla/5.0 (iPhone; CPU iPhone OS 13_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 fychs
+Content-Length	0
+Referer	http://192.168.101.31:8081/?device=ios&channel=ios&versionName=1.0.0
+Cookie	sensorsdata2015jssdkcross=%7B%22distinct_id%22%3A%2216f4bdfddfb181-0541731ccb9d098-4a0f1a63-370944-16f4bdfddfc110%22%2C%22first_id%22%3A%22%22%2C%22props%22%3A%7B%22%24latest_traffic_source_type%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%2C%22%24latest_search_keyword%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%2C%22%24latest_referrer%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%7D%2C%22%24device_id%22%3A%2216f4bdfddfb181-0541731ccb9d098-4a0f1a63-370944-16f4bdfddfc110%22%7D; sajssdk_2015_cross_new_user=1
+Connection	keep-alive

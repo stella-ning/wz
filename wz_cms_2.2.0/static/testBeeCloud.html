@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <!-- import CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+</head>
+<style>
+    body{
+        height:100%;
+        background: #f5f5f5
+    }
+    #app{
+        background-color: #fff;
+        width: 1000px;
+        margin: 0 auto;
+        height: 1000px;
+        padding: 20px;
+    }
+    .block{
+        /*float: left;*/
+    }
+</style>
+<body>
+<title>BeeCloud支付</title>
+<div id="app" >
+    <!-- <el-form class="dt-form" :ref="rulesForm" :model="rulesForm" :rules="rules" label-width="120px">
+        <el-form-item>
+            <el-button class="add-btn" type="primary" @click="callPay">支 付</el-button>
+        </el-form-item>
+    </el-form> -->
+
+      <div class="height:400px;">
+            <span class="pay-btn" @click="callPay" style="display: inline-block;height: 40px;width: 80px;text-align: center;line-height: 40px;margin-top: 40%;
+            margin-left: 49%;cursor: pointer;background: #1F9EF7;border-radius: 2.5px;color: white">支付</span>
+      </div>
+</div>
+</body>
+<!-- import Vue before Element -->
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<!-- import JavaScript -->
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script src="https://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: function() {
+            return {
+                loading:false,
+                tableData:[
+                ],
+               
+            }
+        },
+        created(){
+           
+        },
+        mounted(){
+           
+        },
+        methods:{
+
+            callPay(){
+                $.ajax({
+                    url: '/doctor/zxRecord/testPay',
+                    type: 'POST',
+                    data: {data: JSON.stringify({})},
+                    success: function (data) {
+                        var res = JSON.parse(data);
+                        window.location.href = res.resultData.url;
+                    },
+                    complete:function(){
+                     
+                    }
+                });
+            },
+        
+        }
+    })
+</script>
+</html>

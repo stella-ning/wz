@@ -1,0 +1,70 @@
+.el-dialog {
+    margin-top: 20vh;
+}
+
+.el-message {
+    top: 15%;
+}
+
+
+/* 表单间隔 */
+
+.el-form-item {
+    margin-bottom: 15px;
+}
+
+.el-pagination {
+    text-align: left;
+    padding-left: 20px;
+}
+
+.el-table th.is-leaf {
+    background: #EEF1F6;
+    color: #444;
+}
+
+#jydChannelConversion .el-table th.is-leaf:nth-child(-n+4) {
+    background: #fff;
+}
+
+#jydChannelConversion .el-table th .cell {
+    display: flex;
+    justify-content: space-between;
+}
+
+#jydChannelConversion .el-table th .cell span:first-child {
+    flex: 1;
+}
+
+.el-table thead {
+    color: #444;
+}
+
+.el-table--border td,
+.el-table--border th {
+    border-right: 1px solid #dfe6ec;
+}
+
+
+/* 面包屑样式 */
+
+.el-tabs--card>.el-tabs__header .el-tabs__item.is-active {
+    border: 1px solid #409EFF;
+}
+
+
+/* 限制tooltip的最带宽度 */
+
+.el-tooltip__popper {
+    max-width: 80%;
+    border: 1px solid #dcdfe6!important;
+    box-shadow: 0rem 2px 2px 0px rgba(8, 8, 8, 0.1);
+}
+
+.popper__arrow {
+    border-bottom-color: #dcdfe6!important;
+}
+
+.el-form-item__content .el-select .el-input__inner {
+    min-width: 220px;
+}

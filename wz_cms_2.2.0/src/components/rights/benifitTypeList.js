@@ -1,0 +1,24 @@
+module.exports = [
+    {
+        label:'猎熊',
+        value:1
+    },{
+        label:'车主邦',
+        value:2
+    },{
+        label:'易加油',
+        value:3
+    },{
+        label:'h5跳转',
+        value:4
+    },{
+        label:'直充',
+        value:5
+    },{
+        label:'卡密',
+        value:6
+    },{
+        label:'联登',
+        value:7
+    },
+]

@@ -1,0 +1,320 @@
+.color-red {
+    color: red;
+}
+
+.color-green {
+    color: green;
+}
+
+.color-blue {
+    color: #5FADFF!important;
+}
+
+.color-white {
+    color: white;
+}
+
+.color-black {
+    color: black;
+}
+
+.color-999 {
+    color: #999;
+}
+
+.lh-24 {
+    line-height: 24px;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.ml-20 {
+    margin-left: 20px;
+}
+
+.mr-20 {
+    margin-right: 20px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.mb-40 {
+    margin-bottom: 40px;
+}
+
+.mt-10 {
+    margin-top: 10px;
+}
+
+.mr-10 {
+    margin-right: 10px;
+}
+
+.ml-10 {
+    margin-left: 10px;
+}
+
+.mb-10 {
+    margin-bottom: 10px;
+}
+
+.mt-40 {
+    margin-top: 40px!important;
+}
+
+.pt-20 {
+    padding-top: 20px;
+}
+
+.ta-l {
+    text-align: left;
+}
+
+.ta-r {
+    text-align: right;
+}
+
+.ta-c {
+    text-align: center;
+}
+
+.text-gray {
+    color: #909399;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.dp-ib {
+    display: inline-block;
+}
+
+.fs-12 {
+    font-size: 12px;
+}
+
+.fs-14 {
+    font-size: 14px;
+}
+.fs-16 {
+    font-size: 16px;
+}
+.fs-18 {
+    font-size: 18px;
+}
+.fs-22 {
+    font-size: 22px;
+}
+.fs-24 {
+    font-size: 18px;
+}
+
+.fw-bold {
+    font-weight: bold!important;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+/* 面包屑 */
+
+.nn-breadcrumb {
+    margin-left: -20px;
+    margin-top: -20px;
+    /*  margin-left: -30px;
+    margin-top: -100px;
+    margin-bottom: 40px; */
+    height: 60px;
+    line-height: 60px;
+    padding-left: 20px;
+}
+
+.nn-form_title {
+    margin: 40px 0 20px;
+    font-weight: 400;
+    color: #1f2f3d;
+    font-size: 22px;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.nn-form_subtitle {
+    margin: 20px 0 20px;
+    font-weight: 400;
+    color: #1f2f3d;
+    font-size: 18px;
+    text-align: left;
+}
+
+.nn-form_tips {
+    margin: 20px 0 16px;
+    font-weight: 400;
+    color: #1f2f3d;
+    font-size: 14px;
+    text-align: left;
+}
+
+
+/* 用来展示信息的表单 */
+
+.nn-form_content_left .el-form-item__content {
+    text-align: left;
+}
+
+.nn-no-overflow-table .el-table__body-wrapper {
+    /* overflow: auto!important; */
+    width: 101%;
+}
+.nn-no-overflow-table .cell{
+    text-align: center;
+}
+
+/* 单选框组的样式 */
+
+.nn-checkbox-group .el-checkbox .el-checkbox__inner {
+    display: none;
+}
+
+.nn-checkbox-group .el-checkbox.is-bordered.el-checkbox--medium .el-checkbox__label {
+    line-height: 20px;
+    font-size: 14px;
+}
+
+.nn-input-xxs {
+    width: 60px;
+}
+
+.nn-input-xs {
+    width: 110px;
+}
+
+.nn-input-s {
+    width: 220px;
+}
+
+.nn-input-m {
+    width: 330px;
+}
+
+.nn-input-l {
+    width: 440px;
+}
+
+.nn-table-wrapper {
+    background: white;
+    padding-bottom: 20px;
+    border-radius: 5px;
+}
+
+.nn-table-wrapper .cell {
+    text-align: center;
+}
+
+.nn-form-line-h {
+    border-bottom: 1px solid #ECEEF2;
+    width: calc(100% + 40px);
+    margin-left: -20px;
+}
+
+.nn-bottom-bar {
+    background: rgba(236, 238, 242, .8);
+    padding: 10px 16px;
+    /* background: white;
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    z-index: 100; */
+}
+.nn-bottom-bar .el-button {
+    min-width: 100px;
+}
+
+
+/* 小圆点的不同状态 */
+
+.nn-state-label {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    vertical-align: middle;
+    margin-left: 10px;
+    border-radius: 50%;
+    margin-bottom: 5px;
+}
+
+.nn-success {
+    background: #67C23A;
+    color: #67C23A;
+    font-weight: bold;
+}
+
+.nn-warning {
+    background: #E6A23C;
+    color: #E6A23C;
+    font-weight: bold;
+}
+
+.nn-info {
+    background: #909399;
+    color: #909399;
+    font-weight: bold;
+}
+
+.nn-danger {
+    background: #F56C6C;
+    color: #F56C6C;
+    font-weight: bold;
+}
+
+.nn-list-item {
+    border-bottom: 1px solid #DCDFE6;
+    cursor: pointer;
+    padding-left: 20px;
+}
+
+.nn-list-item:hover {
+    color: #606266;
+    border-color: #F5F7FA;
+    background-color: #F5F7FA;
+    border-bottom: 1px solid #DCDFE6;
+}
+
+.center-parent {
+    position: relative;
+}
+
+.center-parent .center-child {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.dialog-footer .el-button{
+    min-width: 100px;
+}
+
+.riqi.el-input__inner {
+    height: 36px;
+}
+
+.riqi .el-range-separator,.riqi .el-range__icon {
+    line-height:30px !important;
+}
+
+.nn-require:before {
+    content: '*';
+    color: rgb(245, 108, 108);
+    margin-right: 4px;
+  }
+

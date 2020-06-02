@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no,width=device-width,height=device-height">
+        <meta charset="utf-8">
+        <title></title>
+        <meta name="renderer" content="webkit|ie-stand|ie-comp" />
+        <meta content="yes" name="apple-mobile-web-app-capable" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="x5-fullscreen" content="true">
+    <!-- import CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+</head>
+<style>
+    body{
+        height:100%;
+        background: #f5f5f5
+    }
+    #app{
+        background-color: #fff;
+        width: auto;
+        margin: 0 auto;
+        height: 1000px;
+        padding: 20px;
+    }
+    .block{
+        /*float: left;*/
+    }
+
+    input {
+        height: 36px;
+        line-height: 36px;
+        border-radius: 44px;
+        border: 1px solid #999999;
+        padding: 0 10px;
+        margin-top: 10px;
+        outline:none;
+    }
+
+    .pay-btn {
+        margin-top: 30px;
+        margin: 0 auto;
+        display: block;
+        height: 40px;
+        width: 180px;
+        text-align: center;
+        line-height: 40px;
+        cursor: pointer;
+        background: rgb(31, 158, 247);
+        border-radius: 2.5px;
+        color: white;
+    }
+</style>
+<body>
+<title>芝麻信息用</title>
+<div id="app" >
+    <!-- <el-form class="dt-form" :ref="rulesForm" :model="rulesForm" :rules="rules" label-width="120px">
+        <el-form-item>
+            <el-button class="add-btn" type="primary" @click="callPay">支 付</el-button>
+        </el-form-item>
+    </el-form> -->
+        <div style="text-align: center;">
+            <input id="identityCard" type="text" placeholder="身份证号码">    
+            <input id="phone" type="text" placeholder="手机号码">    
+            <input id="realName" type="text" placeholder="真实姓名">    
+        </div> 
+      <div style="margin-top: 20px;">
+            <span class="pay-btn" @click="callPay" >获取</span>
+      </div>
+</div>
+</body>
+<!-- import Vue before Element -->
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<!-- import JavaScript -->
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script src="https://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: function() {
+            return {
+                loading:false,
+                tableData:[
+                ],
+               
+            }
+        },
+        created(){
+           
+        },
+        mounted(){
+           
+        },
+        methods:{
+
+            callPay(){
+
+                var param = {
+                    identityCard:$('#identityCard').val(),
+                    phone:$('#phone').val(),
+                    realName:$('#realName').val(),
+                }
+
+                $.ajax({
+                    url: '/doctor/creditScore/addCreditScore',
+                    type: 'POST',
+                    data: {data: JSON.stringify(param)},
+                    success: function (data) {
+                        var res = JSON.parse(data);
+                        window.location.href = res.resultData.url;
+                    },
+                    complete:function(){
+                     
+                    }
+                });
+            },
+        
+        }
+    })
+</script>
+</html>

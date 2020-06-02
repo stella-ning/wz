@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, viewport-fit=cover">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title>麒麟卡</title>
+
+    <!-- 阿里巴巴svg图标 -->
+    <!-- <script src="//at.alicdn.com/t/font_1315603_1olgy9tcvf3.js"></script> -->
+    <link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_790317_iw9735zjaqi.css"/>
+     <!-- 神策统计sdk代码 -->
+     <script>
+        // 判断代码是否部署在正式服务器
+        window_OnReleaseServer = function () {
+            var host = window.location.host;
+            var isRelease = (host.indexOf('com') != -1
+                || host.indexOf('cn') != -1
+                || host.indexOf('net') != -1
+                || host.indexOf('org') != -1
+                || host.indexOf('wap') != -1
+                || host.indexOf('vip') != -1)
+            console.log('window_OnReleaseServer: ' + isRelease)
+            return isRelease;
+        }
+        var host = window.location.host;
+        var sensorConfig = {};
+        if (host.indexOf('192.168') != -1 || host.indexOf('test.520daikuan.com') != -1 || host.indexOf('127.0.0.1') != -1 || host.indexOf('localhost') != -1) {
+            sensorConfig = {
+                sdk_url: 'http://www.fychs.com/wangzhuan/sensorsdata/sensorsdata.min.js',
+                heatmap_url: 'http://www.fychs.com/wangzhuan/sensorsdata/heatmap.min.js',
+                heatmap: {
+                    //是否开启点击图，默认 default 表示开启，自动采集 $WebClick 事件，可以设置 'not_collect' 表示关闭
+                    //需要 JSSDK 版本号大于 1.7
+                    clickmap: 'not_collect',
+                    //是否开启触达注意力图，默认 default 表示开启，自动采集 $WebStay 事件，可以设置 'not_collect' 表示关闭
+                    //需要 JSSDK 版本号大于 1.9.1
+                    scroll_notice_map: 'not_collect'
+                },
+                name: 'sa',
+                server_url: 'http://sensors.fychs.com:8106/sa',
+                show_log: false, //设置 true 后会在网页控制台打 logger，会显示发送的数据,设置 false 表示不显示。默认 true。
+                is_single_page: false, //设置成 true 后， 表示在单页面开发的网站中，我们会对 hashchange 和 popstate 事件进行监听
+                //配置打通 App 与 H5 的参数
+                use_app_track: true,
+            }
+            console.log('sensorConfig:测试环境');
+        } else if (window_OnReleaseServer()) {
+            sensorConfig = {
+                sdk_url: 'http://www.fychs.com/wangzhuan/sensorsdata/sensorsdata.min.js',
+                heatmap_url: 'http://www.fychs.com/wangzhuan/sensorsdata/heatmap.min.js',
+                heatmap: {
+                    //是否开启点击图，默认 default 表示开启，自动采集 $WebClick 事件，可以设置 'not_collect' 表示关闭
+                    //需要 JSSDK 版本号大于 1.7
+                    clickmap: 'not_collect',
+                    //是否开启触达注意力图，默认 default 表示开启，自动采集 $WebStay 事件，可以设置 'not_collect' 表示关闭
+                    //需要 JSSDK 版本号大于 1.9.1
+                    scroll_notice_map: 'not_collect'
+                },
+                name: 'sa',
+                server_url: 'http://sensors.fychs.com:8106/sa?project=production',
+                show_log: false, //设置 true 后会在网页控制台打 logger，会显示发送的数据,设置 false 表示不显示。默认 true。
+                is_single_page: false, //设置成 true 后， 表示在单页面开发的网站中，我们会对 hashchange 和 popstate 事件进行监听
+                //配置打通 App 与 H5 的参数
+                use_app_track: true,
+            }
+            console.log('sensorConfig:正式环境');
+        }
+
+        (function (para) {
+            var p = para.sdk_url, n = para.name, w = window, d = document, s = 'script', x = null, y = null;
+            if (typeof (w['sensorsDataAnalytic201505']) !== 'undefined') {
+                return false;
+            }
+            w['sensorsDataAnalytic201505'] = n;
+            w[n] = w[n] || function (a) { return function () { (w[n]._q = w[n]._q || []).push([a, arguments]); } };
+            var ifs = ['track', 'quick', 'register', 'registerPage', 'registerOnce', 'trackSignup', 'trackAbtest', 'setProfile', 'setOnceProfile', 'appendProfile', 'incrementProfile', 'deleteProfile', 'unsetProfile', 'identify', 'login', 'logout', 'trackLink', 'clearAllRegister', 'getAppStatus'];
+            for (var i = 0; i < ifs.length; i++) {
+                w[n][ifs[i]] = w[n].call(null, ifs[i]);
+            }
+            if (!w[n]._t) {
+                x = d.createElement(s), y = d.getElementsByTagName(s)[0];
+                x.async = 1;
+                x.src = p;
+                x.setAttribute('charset', 'UTF-8');
+                w[n].para = para;
+                y.parentNode.insertBefore(x, y);
+            }
+        })(sensorConfig);
+    </script>
+    <!-- 配置支付方式 -->
+    <script>
+        //是否免注册买卡
+        var isCardSimple = true;
+        // 'weChat':只有微信支付,'alipay':只有支付宝支付,'all':同时有微信和支付宝
+        var APP_PAY_TYPE = 'all';
+    </script>
+  </head>
+  <body>
+    <noscript>
+      <strong>We're sorry but mall-web doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>
